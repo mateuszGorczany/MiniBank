@@ -1,0 +1,6 @@
+*.dll
+.vscode/
+*.cache
+*.CopyComplete
+*.FileListAbsolute.txt
+*.pdb
