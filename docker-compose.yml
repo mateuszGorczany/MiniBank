@@ -1,0 +1,52 @@
+version: "3.9"
+services:
+    web:
+        build: .
+        ports:
+            - "8080:80"
+        depends_on:
+            - maindb
+            - sub_db1
+            - sub_db2
+    maindb:
+        build:
+            context: ./DB
+            dockerfile: ./main/Dockerfile
+        environment:
+            SA_PASSWORD: "Passw0rd"
+            ACCEPT_EULA: "Y"
+            MSSQ__RPC_PORT: 135
+            MSSQL_DTC_TCP_PORT: 51000
+            MSSQL_PID: Express
+        image: maindb
+
+        ports:
+            ["1433:1433"]
+
+    sub_db1:
+        build:
+            context: ./DB
+            dockerfile: ./subunit1/Dockerfile
+        environment:
+            SA_PASSWORD: "Passw0rd"
+            ACCEPT_EULA: "Y"
+            MSSQ__RPC_PORT: 136
+            MSSQL_DTC_TCP_PORT: 51001
+            MSSQL_PID: Express
+        image: subdb1
+        ports:
+            ["41433:1433"]
+
+    sub_db2:
+        build:
+            context: ./DB
+            dockerfile: ./subunit2/Dockerfile
+        environment:
+            SA_PASSWORD: "Passw0rd"
+            ACCEPT_EULA: "Y"
+            MSSQ__RPC_PORT: 137
+            MSSQL_DTC_TCP_PORT: 51002
+            MSSQL_PID: Express
+        image: subdb2
+        ports:
+            ["61433:1433"]

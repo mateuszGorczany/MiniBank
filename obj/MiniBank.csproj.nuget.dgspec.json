@@ -1,0 +1,77 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/mateusz/Dokumenty/AGH/Sem6/BD/tests/MiniBank/MiniBank.csproj": {}
+  },
+  "projects": {
+    "/home/mateusz/Dokumenty/AGH/Sem6/BD/tests/MiniBank/MiniBank.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/mateusz/Dokumenty/AGH/Sem6/BD/tests/MiniBank/MiniBank.csproj",
+        "projectName": "MiniBank",
+        "projectPath": "/home/mateusz/Dokumenty/AGH/Sem6/BD/tests/MiniBank/MiniBank.csproj",
+        "packagesPath": "/home/mateusz/.nuget/packages/",
+        "outputPath": "/home/mateusz/Dokumenty/AGH/Sem6/BD/tests/MiniBank/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/mateusz/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/snap/dotnet-sdk/129/sdk/5.0.301/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
